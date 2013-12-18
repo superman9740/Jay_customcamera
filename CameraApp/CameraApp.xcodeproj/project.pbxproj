@@ -15,13 +15,21 @@
 		3CDD4B8918611289006CD2F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD4B8818611289006CD2F7 /* AppDelegate.m */; };
 		3CDD4B8C18611289006CD2F7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDD4B8A18611289006CD2F7 /* Main_iPhone.storyboard */; };
 		3CDD4B8F18611289006CD2F7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDD4B8D18611289006CD2F7 /* Main_iPad.storyboard */; };
-		3CDD4B9218611289006CD2F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD4B9118611289006CD2F7 /* ViewController.m */; };
+		3CDD4B9218611289006CD2F7 /* CustomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD4B9118611289006CD2F7 /* CustomCameraViewController.m */; };
 		3CDD4B9418611289006CD2F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDD4B9318611289006CD2F7 /* Images.xcassets */; };
 		3CDD4B9B18611289006CD2F7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDD4B9A18611289006CD2F7 /* XCTest.framework */; };
 		3CDD4B9C18611289006CD2F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDD4B7818611289006CD2F7 /* Foundation.framework */; };
 		3CDD4B9D18611289006CD2F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDD4B7C18611289006CD2F7 /* UIKit.framework */; };
 		3CDD4BA518611289006CD2F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CDD4BA318611289006CD2F7 /* InfoPlist.strings */; };
 		3CDD4BA718611289006CD2F7 /* CameraAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD4BA618611289006CD2F7 /* CameraAppTests.m */; };
+		DEA84A2418620F3E000EA470 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2118620F3E000EA470 /* circle.png */; };
+		DEA84A2518620F3E000EA470 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2218620F3E000EA470 /* plus.png */; };
+		DEA84A2618620F3E000EA470 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2318620F3E000EA470 /* triangle.png */; };
+		DEA84A2818623F7F000EA470 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2718623F7F000EA470 /* play@2x.png */; };
+		DEA84A2A18624132000EA470 /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2918624132000EA470 /* done.png */; };
+		DEA84A2E186245F6000EA470 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA84A2C1862427D000EA470 /* MainViewController.m */; };
+		DEA84A301862484F000EA470 /* switch_view.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2F1862484F000EA470 /* switch_view.png */; };
+		DEA84A3218624D2B000EA470 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A3118624D2B000EA470 /* flash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +55,23 @@
 		3CDD4B8818611289006CD2F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3CDD4B8B18611289006CD2F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		3CDD4B8E18611289006CD2F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		3CDD4B9018611289006CD2F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3CDD4B9118611289006CD2F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3CDD4B9018611289006CD2F7 /* CustomCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCameraViewController.h; sourceTree = "<group>"; };
+		3CDD4B9118611289006CD2F7 /* CustomCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCameraViewController.m; sourceTree = "<group>"; };
 		3CDD4B9318611289006CD2F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CDD4B9918611289006CD2F7 /* CameraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDD4B9A18611289006CD2F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3CDD4BA218611289006CD2F7 /* CameraAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraAppTests-Info.plist"; sourceTree = "<group>"; };
 		3CDD4BA418611289006CD2F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3CDD4BA618611289006CD2F7 /* CameraAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAppTests.m; sourceTree = "<group>"; };
+		DEA84A2118620F3E000EA470 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		DEA84A2218620F3E000EA470 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		DEA84A2318620F3E000EA470 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
+		DEA84A2718623F7F000EA470 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		DEA84A2918624132000EA470 /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
+		DEA84A2B1862427D000EA470 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DEA84A2C1862427D000EA470 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DEA84A2F1862484F000EA470 /* switch_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_view.png; sourceTree = "<group>"; };
+		DEA84A3118624D2B000EA470 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +133,12 @@
 			children = (
 				3CDD4B8718611289006CD2F7 /* AppDelegate.h */,
 				3CDD4B8818611289006CD2F7 /* AppDelegate.m */,
+				DEA84A2B1862427D000EA470 /* MainViewController.h */,
+				DEA84A2C1862427D000EA470 /* MainViewController.m */,
 				3CDD4B8A18611289006CD2F7 /* Main_iPhone.storyboard */,
 				3CDD4B8D18611289006CD2F7 /* Main_iPad.storyboard */,
-				3CDD4B9018611289006CD2F7 /* ViewController.h */,
-				3CDD4B9118611289006CD2F7 /* ViewController.m */,
+				3CDD4B9018611289006CD2F7 /* CustomCameraViewController.h */,
+				3CDD4B9118611289006CD2F7 /* CustomCameraViewController.m */,
 				3CDD4B9318611289006CD2F7 /* Images.xcassets */,
 				3CDD4B7F18611289006CD2F7 /* Supporting Files */,
 			);
@@ -129,6 +148,7 @@
 		3CDD4B7F18611289006CD2F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DEA84A2018620F28000EA470 /* Images */,
 				3CDD4B8018611289006CD2F7 /* CameraApp-Info.plist */,
 				3CDD4B8118611289006CD2F7 /* InfoPlist.strings */,
 				3CDD4B8418611289006CD2F7 /* main.m */,
@@ -153,6 +173,20 @@
 				3CDD4BA318611289006CD2F7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEA84A2018620F28000EA470 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DEA84A3118624D2B000EA470 /* flash.png */,
+				DEA84A2F1862484F000EA470 /* switch_view.png */,
+				DEA84A2918624132000EA470 /* done.png */,
+				DEA84A2718623F7F000EA470 /* play@2x.png */,
+				DEA84A2118620F3E000EA470 /* circle.png */,
+				DEA84A2218620F3E000EA470 /* plus.png */,
+				DEA84A2318620F3E000EA470 /* triangle.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +265,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA84A301862484F000EA470 /* switch_view.png in Resources */,
+				DEA84A3218624D2B000EA470 /* flash.png in Resources */,
 				3CDD4B8F18611289006CD2F7 /* Main_iPad.storyboard in Resources */,
 				3CDD4B9418611289006CD2F7 /* Images.xcassets in Resources */,
+				DEA84A2A18624132000EA470 /* done.png in Resources */,
+				DEA84A2418620F3E000EA470 /* circle.png in Resources */,
 				3CDD4B8C18611289006CD2F7 /* Main_iPhone.storyboard in Resources */,
 				3CDD4B8318611289006CD2F7 /* InfoPlist.strings in Resources */,
+				DEA84A2618620F3E000EA470 /* triangle.png in Resources */,
+				DEA84A2818623F7F000EA470 /* play@2x.png in Resources */,
+				DEA84A2518620F3E000EA470 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CDD4B9218611289006CD2F7 /* ViewController.m in Sources */,
+				3CDD4B9218611289006CD2F7 /* CustomCameraViewController.m in Sources */,
 				3CDD4B8918611289006CD2F7 /* AppDelegate.m in Sources */,
 				3CDD4B8518611289006CD2F7 /* main.m in Sources */,
+				DEA84A2E186245F6000EA470 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +516,7 @@
 				3CDD4BAC18611289006CD2F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CDD4BAD18611289006CD2F7 /* Build configuration list for PBXNativeTarget "CameraAppTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +525,7 @@
 				3CDD4BAF18611289006CD2F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
