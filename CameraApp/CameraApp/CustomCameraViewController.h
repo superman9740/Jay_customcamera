@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Highlighter.h"
+
 @import CoreImage;
 @import CoreMedia;
 @import ImageIO;
 @import QuartzCore;
 @import MobileCoreServices;
+
 
 @protocol CustomCameraDelegate <NSObject>
 @required

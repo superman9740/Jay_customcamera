@@ -29,8 +29,37 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [_triangleButton addGestureRecognizer:tapGestureRecog];
     
     [self.view bringSubviewToFront:_topView];
+  
+
+    
+    int offset = 0;
+
+for (int i = 5; i > 0; i--)
+{
+    
+    
+    CGRect frame;
+    frame.origin.x = offset * i;
+    offset = 60;
+    
+    frame.origin.y = 0;
+    frame.size.height = 40;
+    frame.size.width = 40;
+    
+    Highlighter* subview = [[Highlighter alloc] initWithFrame:frame];
+    subview.backgroundColor = [UIColor blackColor];
+    subview.alpha = .10;
+    
+    //UITapGestureRecognizer* tapGestureRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewImage:)];
+    //[subview addGestureRecognizer:tapGestureRecog];
+    [self.thumbnailView addSubview:subview];
+    
+    
     
 }
+    
+}
+
 
 
 -(void)viewDidAppear:(BOOL)animated
@@ -48,6 +77,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     _session.sessionPreset = AVCaptureSessionPresetHigh;
     //AVCaptureDevice* camera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
+    
     error=nil;
     AVCaptureInput* cameraInput = [[AVCaptureDeviceInput alloc] initWithDevice:camera error:&error];
     
@@ -60,7 +90,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     _previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
     _previewLayer.frame = _cameraView.frame;
-    _previewLayer.videoGravity = AVLayerVideoGravityResize;
+    _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    [_previewLayer.connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
     
     [_cameraView.layer addSublayer:_previewLayer];
     
@@ -81,6 +112,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(IBAction)takePhoto:(id)sender
 {
+    if([[UIDevice currentDevice] orientation] != UIInterfaceOrientationPortrait)
+        return;
+    
+    
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in [[self stillImageOutput] connections]) {
         for (AVCaptureInputPort *port in [connection inputPorts]) {
@@ -108,6 +143,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
                                                              
                                                              
                                                              UIImage *image=[self imageFromSampleBuffer:imageSampleBuffer];
+                                                             if(images.count == 5)
+                                                             {
+                                                                 [images removeLastObject];
+                                                             }
+                                                             
                                                              [images addObject:image];
                                                              [self performSelectorOnMainThread:@selector(updatePicRollView:) withObject:nil waitUntilDone:NO];
                                                              
@@ -211,6 +251,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         if ([device position] == AVCaptureDevicePositionFront)
         {
             usingFrontCamera = YES;
+            [_session beginConfiguration];
+            [device lockForConfiguration:nil];
+            
+            [device setTorchMode:AVCaptureTorchModeAuto];
+            [device unlockForConfiguration];
+            [_session commitConfiguration];
             
             return device;
         }
@@ -224,12 +270,19 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         if ([device position] == AVCaptureDevicePositionBack)
         {
             usingFrontCamera = NO;
+            [_session beginConfiguration];
+            [device lockForConfiguration:nil];
+            
+            [device setTorchMode:AVCaptureTorchModeAuto];
+            [device unlockForConfiguration];
+            [_session commitConfiguration];
             
             return device;
         }
     }
     return nil;
 }
+
 
 -(IBAction)updatePicRollView:(id)sender
 {

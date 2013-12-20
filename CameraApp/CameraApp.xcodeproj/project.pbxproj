@@ -30,6 +30,7 @@
 		DEA84A2E186245F6000EA470 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA84A2C1862427D000EA470 /* MainViewController.m */; };
 		DEA84A301862484F000EA470 /* switch_view.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A2F1862484F000EA470 /* switch_view.png */; };
 		DEA84A3218624D2B000EA470 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA84A3118624D2B000EA470 /* flash.png */; };
+		DEA84A351864B67F000EA470 /* Highlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA84A341864B67F000EA470 /* Highlighter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		DEA84A2C1862427D000EA470 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		DEA84A2F1862484F000EA470 /* switch_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_view.png; sourceTree = "<group>"; };
 		DEA84A3118624D2B000EA470 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
+		DEA84A331864B67F000EA470 /* Highlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Highlighter.h; sourceTree = "<group>"; };
+		DEA84A341864B67F000EA470 /* Highlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Highlighter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				3CDD4B8D18611289006CD2F7 /* Main_iPad.storyboard */,
 				3CDD4B9018611289006CD2F7 /* CustomCameraViewController.h */,
 				3CDD4B9118611289006CD2F7 /* CustomCameraViewController.m */,
+				DEA84A331864B67F000EA470 /* Highlighter.h */,
+				DEA84A341864B67F000EA470 /* Highlighter.m */,
 				3CDD4B9318611289006CD2F7 /* Images.xcassets */,
 				3CDD4B7F18611289006CD2F7 /* Supporting Files */,
 			);
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CDD4B9218611289006CD2F7 /* CustomCameraViewController.m in Sources */,
+				DEA84A351864B67F000EA470 /* Highlighter.m in Sources */,
 				3CDD4B8918611289006CD2F7 /* AppDelegate.m in Sources */,
 				3CDD4B8518611289006CD2F7 /* main.m in Sources */,
 				DEA84A2E186245F6000EA470 /* MainViewController.m in Sources */,
@@ -434,10 +440,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ronald Dickson (Z7A22D727B)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CameraApp/CameraApp-Prefix.pch";
 				INFOPLIST_FILE = "CameraApp/CameraApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A3A4E32A-D690-4864-BF7D-0924BEE04081";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,10 +455,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ronald Dickson (C5B6D5ZCDE)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CameraApp/CameraApp-Prefix.pch";
 				INFOPLIST_FILE = "CameraApp/CameraApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4A802344-EB57-4938-B1B5-5B323DD61866";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
