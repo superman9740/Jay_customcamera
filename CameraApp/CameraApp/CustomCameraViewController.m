@@ -39,7 +39,20 @@ for (int i = 5; i > 0; i--)
     
     
     CGRect frame;
-    frame.origin.x = offset * i;
+    int val = offset * i;
+    if(val == 0)
+    {
+    
+        frame.origin.x = 16;
+        
+    }
+    else
+    {
+   
+        frame.origin.x = offset * i + 20;
+        
+    }
+    
     offset = 60;
     
     frame.origin.y = 0;
@@ -50,11 +63,7 @@ for (int i = 5; i > 0; i--)
     subview.backgroundColor = [UIColor blackColor];
     subview.alpha = .10;
     
-    //UITapGestureRecognizer* tapGestureRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewImage:)];
-    //[subview addGestureRecognizer:tapGestureRecog];
     [self.thumbnailView addSubview:subview];
-    
-    
     
 }
     
@@ -75,7 +84,6 @@ for (int i = 5; i > 0; i--)
     
     _session = [[AVCaptureSession alloc] init];
     _session.sessionPreset = AVCaptureSessionPresetHigh;
-    //AVCaptureDevice* camera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
     
     error=nil;
@@ -153,10 +161,6 @@ for (int i = 5; i > 0; i--)
                                                              
                                                              error  = NULL;
                                                              
-                                                             dispatch_async(dispatch_get_main_queue(), ^{
-                                                                 
-                                                                 
-                                                             });
                                                              
                                                              
                                                          }];
@@ -210,10 +214,8 @@ for (int i = 5; i > 0; i--)
         // Move the origin to the middle of the image so we will rotate and scale around the center.
         CGContextTranslateCTM(bitmap, size.width/2, size.height/2);
         
-        //   // Rotate the image context
         CGContextRotateCTM(bitmap, radians(90));
         CGContextScaleCTM(bitmap, 1.0f, -1.0f);
-        // Now, draw the rotated/scaled image into the context
         CGContextDrawImage(bitmap, CGRectMake(-size.width / 2, -size.height / 2, size.width, size.height), [image CGImage]);
         
         UIImage *rotatedImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -222,10 +224,6 @@ for (int i = 5; i > 0; i--)
      
     
         return rotatedImage;
-    
-    
-    
-
     
     
 }
@@ -289,12 +287,25 @@ for (int i = 5; i > 0; i--)
     @autoreleasepool
     {
         int offset = 0;
-        for (int i = images.count; i > 0; i--)
+        for (long i = images.count; i > 0; i--)
         {
             
             
             CGRect frame;
-            frame.origin.x = offset * i;
+            long val = offset * i;
+            if(val == 0)
+            {
+                
+                frame.origin.x = 16;
+                
+            }
+            else
+            {
+                
+                frame.origin.x = offset * i + 20;
+                
+            }
+            
             offset = 60;
             
             frame.origin.y = 0;
@@ -306,12 +317,7 @@ for (int i = 5; i > 0; i--)
             
             subview.image = images[i-1];
                                     
-            //UITapGestureRecognizer* tapGestureRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewImage:)];
-            //[subview addGestureRecognizer:tapGestureRecog];
             [self.thumbnailView addSubview:subview];
-            
-            
-            
             
         }
     }
@@ -331,7 +337,7 @@ for (int i = 5; i > 0; i--)
     pickerController.allowsEditing = NO;
     pickerController.delegate = self;
     
-    [self presentModalViewController:pickerController animated:YES];
+    [self presentViewController:pickerController animated:YES completion:nil];
     
     
 }
@@ -409,7 +415,6 @@ for (int i = 5; i > 0; i--)
 {
     
     [_delegate didFinishImageSelection:images];
-    //[self.view removeFromSuperview];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
@@ -418,7 +423,7 @@ for (int i = 5; i > 0; i--)
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end

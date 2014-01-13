@@ -33,7 +33,6 @@
 -(void)didFinishImageSelection:(NSArray*)images
 {
     
-    NSArray* array = images;
     _imageView.image = images[0];
     
     
